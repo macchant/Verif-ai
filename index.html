@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verif.ai - AI Image Verifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <h1>🖼️ Image Content Predictor</h1>
+        <p>Upload an image to see what's inside.</p>
+        
+        <div class="uploader">
+            <input id="image-upload" type="file" accept="image/*">
+            <label for="image-upload">Choose an Image</label>
+        </div>
+
+        <div id="content-container" class="hidden">
+            <img id="image-preview" src="#" alt="Your uploaded image" />
+            <div id="results-container">
+                <h2>Predictions:</h2>
+                <ul id="prediction-list"></ul>
+            </div>
+        </div>
+
+        <div id="loader" class="hidden">Loading Model...</div>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@latest/dist/mobilenet.min.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
