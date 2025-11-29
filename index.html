@@ -25,6 +25,14 @@
             </div>
         </div>
 
+        <div id="class-labels">
+  <h3>I can detect:</h3>
+  <ul>
+    <li>✅ Real Image</li>
+    <li>❌ AI Generated (Example)</li>
+  </ul>
+</div>
+
         <div id="loader" class="hidden">Loading Model...</div>
     </main>
     
@@ -32,6 +40,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@latest/dist/mobilenet.min.js"></script>
 
     <script src="app.js"></script>
-
+    <script>
+        // Example logic update in your prediction loop
+prediction.forEach(p => {
+    const barWidth = (p.probability * 100).toFixed(1) + "%";
+    // Create a visual bar element dynamically
+    // <div class="bar" style="width: ${barWidth}"></div>
+});
+    </script>
 </body>
 </html>
